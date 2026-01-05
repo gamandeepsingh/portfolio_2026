@@ -4,9 +4,9 @@ import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiArrowUp } from "react-icons/
 import { Link as ScrollLink } from "react-scroll";
 import { personalInfo } from "../../utils/data";
 import { BiHeart } from "react-icons/bi";
+import ghostImage from "../../assets/ghost.png";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
 
   const socialLinks = [
     { icon: FiGithub, href: personalInfo.github, label: "GitHub" },
@@ -104,7 +104,7 @@ const Footer = () => {
       </div>
 
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 hidden sm:block">
-        <img src="src/assets/ghost.png" className="w-48 md:w-64 pointer-events-none" alt="" />
+        <img src={ghostImage} className="w-48 md:w-64 pointer-events-none" alt="" />
       </div>
     </footer>
   );
