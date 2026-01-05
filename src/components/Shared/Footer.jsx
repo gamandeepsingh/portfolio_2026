@@ -71,7 +71,7 @@ const Footer = () => {
         </div>
 
         {/* Large Name Display */}
-        <div className="mb-12 overflow-hidden">
+        <div className="w-full mb-12 overflow-hidden flex justify-center">
           <motion.div
             className="font-nohemi text-[15vw] sm:text-[12vw] lg:text-[10vw] text-white/5 leading-none select-none"
             initial={{ x: -100, opacity: 0 }}
@@ -86,7 +86,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 border-t border-white/5">
           <p className="font-nohemi-thin text-gray-600 text-sm text-center sm:text-left">
-             Built with <BiHeart className="inline mb-1 text-primary"/> using React & Tailwind.
+            Built with <BiHeart className="inline mb-1 text-primary" /> using React & Tailwind.
           </p>
 
           {/* Back to Top */}
@@ -101,6 +101,10 @@ const Footer = () => {
             </motion.button>
           </ScrollLink>
         </div>
+      </div>
+
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 hidden sm:block">
+        <img src="src/assets/ghost.png" className="w-48 md:w-64 pointer-events-none" alt="" />
       </div>
     </footer>
   );
