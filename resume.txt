@@ -1,0 +1,219 @@
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+% Make vertical spacing tighter to fit everything on one page
+\renewcommand{\baselinestretch}{0.95}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{Gamandeep Singh}{ \urlstyle{same}\href{mailto:gamandeepsingh6@gmail.com}{gamandeepsingh6@gmail.com} | \href{https://gamandeepsingh.vercel.app/}{Portfolio} | \href{https://www.linkedin.com/in/gamandeep-singh-344001256/}{linkedIn/gamandeep} | \href{tel:+916394003592}{+91 6394003592}\\
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{KIET Group of Institutions}
+\descript{Affiliated to AKTU}
+\descript{Btech in CSIT}
+CGPA : 9 / 10 \\
+\location{Mar 2026 | Delhi NCR}
+\sectionsep
+
+\subsection{S.N. Public School}
+\descript{CBSE}
+\location{12th : 95.8\%  \&  10th : 92.8\%}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LIVE PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Live Projects} 
+\begin{tabular}{lr}
+\href{https://www.npmjs.com/package/solana-pay-widget}{\bf Solana Pay Plugin-(Typescript)} \\
+\href{https://decharge.us/}{\bf Decharge-(Freelance - NextJS)} \\
+\href{https://jaagran-patra.vercel.app/}{\bf Jaagran Patra-(Freelance - PERN)} \\
+\href{https://www.listerji.com/}{\bf ListerJI-(MERN Stack)} \\
+\href{https://paybursement.xyz/}{\bf Paybursement-(NextJS)} \\
+\href{https://pristine-weld.vercel.app/}{\bf PRISTINE - UI Library-(MERN Stack)} \\
+\href{https://www.elanine.com/}{\bf Elanine Creatives-(ReactJS)} \\
+\href{https://iwoc3.live/}{\bf IWOC3.0-(EJS)} \\
+\href{https://innogeeks-site.vercel.app/}{\bf INNOGEEKS-(MERN Stack)} \\
+\href{https://calendso-ebon.vercel.app/}{\bf Calendso-(NextJS)} \\
+\href{https://www.saimlds.in/}{\bf SAIMLDS-(MERN Stack)} \\
+\href{https://dineme.vercel.app/}{\bf Restaurant-Website-(ReactJS)}
+\end{tabular}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards}
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\textbf{2025} & Academics (1st Prize) \\
+\textbf{2024} & Smart India Hackathon (Top 6th Position) \\
+\textbf{2023} & HackSphere Hackathon (1st Prize) \\
+\textbf{2023} & Google Solution Challenge (Top 50) \\
+\end{tabularx}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     CERTIFICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Certifications} 
+\href{https://drive.google.com/file/d/1k6x2aZVOqKEFupaj1wuS8MGOqcMl49rN/view}{\bf FullStack Web Developer (LinkedIn) - 2024}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Languages}
+JavaScript \textbullet{} Java \textbullet{} Solidity \textbullet{} C \textbullet{} HTML
+\sectionsep
+
+\subsection{Libraries \& Frameworks}
+TypeScript \textbullet{} ReactJS \textbullet{} Angular \textbullet{} NextJS \\ \textbullet{} Solana.js \textbullet{} Node \textbullet{} Express \\ \textbullet{} Tailwind \textbullet{}
+SCSS \textbullet{} GSAP \textbullet{} Flask
+\sectionsep
+
+\subsection{Database}
+MongoDB \textbullet{} PostgreSQL \textbullet{} Prisma
+\sectionsep
+
+\subsection{Technologies \& Tools}
+GitHub \textbullet{} Git \textbullet{} Docker \textbullet{} AWS \\
+Sanity.io \textbullet{} Framer \textbullet{} Rest API
+\sectionsep
+
+\subsection{Coding}
+Leetcode (100+) \textbullet{} GFG (100+)
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{\href{https://x.com/gpunet}{GPU.Net}}
+\descript{| \textbf{Full Stack Dev}}
+\location{Oct 2025 – Present | \textbf{React, Hono, Next.js, TypeScript, Web3, Ethereum}}
+\vspace{2mm}
+\begin{tightemize}
+\vspace{2mm}
+\item Developing responsive, high-performance frontend for Web3 dashboards.
+\item Collaborating with backend and blockchain teams to ship production features.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\href{https://x.com/decharge}{Decharge Networks}}
+\descript{| \textbf{Web3 Freelance Developer}}
+\location{Aug 2025 – Oct 2025 | \textbf{Solana, NextJS, Tanstack, Zustand}}
+\begin{tightemize}
+\item Built Web3 integrations and staking mechanisms for a gaming ecosystem.
+\item Implemented wallet connectivity and NFT marketplace features.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\href{https://elanine.com/}{Elanine Creatives}}
+\descript{| \textbf{SDE Intern} }
+\location{July 2024 - Sep 2025 | \textbf{MERN, MEAN, AWS, DevOps, SaaS}}
+\begin{tightemize}
+\item Built a custom \textbf{React-based component library — PRISTINE UI} to streamline UI development.
+\item Optimized \textbf{FindYourVibe}: Achieved an increase \textbf{ 90\% in platform participation}.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\href{https://x.com/Easyeduverse}{EasyEd - Educational Platform}}
+\descript{| \textbf{Backend Intern} }
+\location{Jan 2024 - June 2024 | \textbf{NodeJS, AWS, Cloudinary}}
+\begin{tightemize}
+\item Improved \textbf{backend performance} by optimizing \textbf{API response times} through effective caching, reducing latency.
+\end{tightemize}
+\sectionsep
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+
+\runsubsection{\href{https://chainupi.tech}{ChainUPI - Multi-Chain Crypto Payments}}
+\descript{| \textbf{NextJS, Solidity, Chainlink, QR Payments} \href{https://github.com/ChainUPI}{[GitHub]}}
+\location{Nov 2025 - Working}
+\begin{tightemize}
+\item \textbf{ChainUPI} is a revolutionary multi-chain crypto payment solution enabling \textbf{seamless QR code payments}, real-time crypto conversion with \textbf{Chainlink}, and secure escrow settlement.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\href{https://findyourvibe.in/}{FindYourVibe - NearBy Events Listing}}
+\descript{| \textbf{MEAN Stack, Razorpay}}
+\location{Jan 2025 - Mar 2025}
+\begin{tightemize}
+\item \textbf{FindYourVibe} is a MEAN stack(microservice) based event platform with Razorpay integration for \textbf{ticket purchases} and a \textbf{real-time dashboard} to track sales and user activity.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\href{https://storenv.vercel.app/}{Storenv - Secure Your env variables}}
+\descript{| \textbf{NextJS, TypeScript, NextAuth, CryptoJS | }{\href{https://github.com/gamandeepsingh/Storenv}{Github}}}
+\location{Nov 2024 - Dec 2024}
+\begin{tightemize}
+\item Storenv was built with \textbf{security and ease of use} in mind. It simplifies the process with a \textbf{secure and centralized solution}.
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LEADERSHIP & ACHIEVEMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Leadership and Achievements}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Solved \textbf{100+ challenging problems on Leetcode}, showcasing strong problem-solving skills.
+\item \textbf{Selected for Solution Challenge 2024}  by Google among \textbf{4000+ projects}.
+\item \textbf{Leading a team of 250+ members} at \textbf{INNOGEEKS}, organizing multiple events, and mentoring team members.
+\item Won \textbf{1st position in Hack Sphere Hackathon},demonstrating creativity and technical prowess.
+
+\end{tightemize}
+\sectionsep
+
+
+\end{minipage} 
+\end{document}
