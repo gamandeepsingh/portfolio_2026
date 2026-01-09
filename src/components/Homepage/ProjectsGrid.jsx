@@ -74,7 +74,7 @@ const ProjectsGrid = forwardRef(({ globeContainerRef }, ref) => {
             </h2>
             <Link 
               to="/projects"
-              className="group flex items-center gap-2 text-gray-400 hover:text-white font-nohemi-thin text-sm transition-colors"
+              className="group flex items-center gap-2 text-gray-300 hover:text-white font-nohemi-thin text-sm transition-colors"
             >
               View all projects
               <FiArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

@@ -32,7 +32,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-nohemi text-2xl text-white">Gamandeep Singh</h3>
             <p className="font-nohemi-thin text-gray-500 text-sm max-w-xs">
-              Full Stack Developer & Web3 Enthusiast crafting digital experiences.
+              Full Stack Web3 Developer crafting digital experiences.
             </p>
           </div>
 
@@ -85,8 +85,7 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 border-t border-white/5">
-          <p className="font-nohemi-thin text-gray-600 text-sm text-center sm:text-left">
-            Built with <BiHeart className="inline mb-1 text-primary" /> using React & Tailwind.
+          <p className="">
           </p>
 
           {/* Back to Top */}
