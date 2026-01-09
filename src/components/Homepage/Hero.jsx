@@ -72,7 +72,7 @@ const Hero = () => {
 
         {/* Main Heading */}
         <motion.div variants={itemVariants} className="mb-4">
-          <span className="font-nohemi-thin text-lg sm:text-xl text-gray-400 tracking-wide">
+          <span className="font-nohemi-thin tex-base sm:text-lg text-gray-400 tracking-wide">
             Hi, I&apos;m
           </span>
         </motion.div>
@@ -93,7 +93,7 @@ const Hero = () => {
 
         {/* Role Tags */}
         <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-3 mb-8">
-          {["Full Stack Developer", "Web3 Enthusiast", "Open Source"].map((tag, i) => (
+          {["Full Stack Developer", "Web3 Enthusiast", "Open Source"].map((tag) => (
             <span
               key={tag}
               className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300 font-nohemi-thin hover:bg-white/10 hover:border-white/20 transition-all duration-300 cursor-default"
@@ -109,8 +109,16 @@ const Hero = () => {
           className="font-nohemi-thin text-base sm:text-lg text-gray-400 max-w-2xl mb-10 leading-relaxed"
         >
           Building scalable applications with modern technologies. Currently crafting 
-          <span className="text-white"> Web3 solutions</span> at GPU.Net while leading 
-          <span className="text-white"> 250+ developers</span> at INNOGEEKS.
+          <span className="text-white"> Web3 solutions</span> at 
+          <a
+            href="https://gpu.net/about"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white underline hover:text-gray-300 transition-colors duration-300 mx-1"
+          >
+            GPU.NET
+          </a>
+          .
         </motion.p>
 
         {/* CTA Buttons */}

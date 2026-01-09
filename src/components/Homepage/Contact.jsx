@@ -22,7 +22,6 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: FiMail, label: "Email", value: personalInfo.email, href: `mailto:${personalInfo.email}` },
-    { icon: FiPhone, label: "Phone", value: personalInfo.phone, href: `tel:${personalInfo.phone}` },
     { icon: FiMapPin, label: "Location", value: personalInfo.location, href: null },
   ];
 
@@ -205,14 +204,14 @@ const Contact = () => {
               </Link>
               
               <motion.a
-                href="https://drive.google.com/file/d/1VC2Pt6rnnyrbYiBo0mDxKZS0bKPNWupe/view?usp=sharing"
+                href="https://drive.google.com/file/d/1bU1rLxH6JApubYos_kVn9Y8nDkAglQul/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-white/10 hover:bg-white/[0.04] transition-all text-center group"
                 whileHover={{ y: -2 }}
               >
                 <span className="text-gray-400 font-nohemi-thin text-sm group-hover:text-white transition-colors">
-                  Wanna my Resume ↗
+                  Wanna see my Resume ↗
                 </span>
               </motion.a>
             </div>

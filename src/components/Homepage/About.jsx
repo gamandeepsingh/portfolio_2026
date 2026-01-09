@@ -15,16 +15,16 @@ const About = () => {
   const [textSize, setTextSize] = useState(window.innerWidth < 640 ? '5xl' : '9xl');
 
   const stats = [
+    { number: "20+", label: "Live Projects", icon: FiZap },
     { number: "100+", label: "Problems Solved", icon: FiCode },
     { number: "250+", label: "Team Members Led", icon: FiLayers },
-    { number: "12+", label: "Live Projects", icon: FiZap },
     { number: "4+", label: "Awards Won", icon: FiAward },
   ];
 
   const highlights = [
-    "Currently building Web3 dashboards at GPU.Net",
-    "Leading 250+ members at INNOGEEKS technical community",
-    "Selected for Google Solution Challenge (Top 50 among 4000+)",
+    "Currently building Web3 GPU.Net",
+    "Tech lead at INNOGEEKS technical community",
+    "Done 5+ Freelance Projects",
     "Winner of HackSphere Hackathon & SIH Finalist",
   ];
 
@@ -157,7 +157,7 @@ const About = () => {
             className="space-y-6"
           >
             <p className="font-nohemi-thin text-gray-400 text-lg leading-relaxed">
-              I&apos;m a <span className="text-white">Full Stack Developer</span> based in Delhi NCR, 
+              I&apos;m a <span className="text-white">Full Stack Web3 Developer</span> based in Bengaluru, 
               currently pursuing my B.Tech in Computer Science at KIET Group of Institutions with a 
               <span className="text-white"> CGPA of 9/10</span>.
             </p>
@@ -166,7 +166,7 @@ const About = () => {
               I&apos;m passionate about building scalable applications and contributing to open-source projects.
             </p>
             <p className="font-nohemi-thin text-gray-400 text-lg leading-relaxed">
-              When I&apos;m not coding, I&apos;m either solving problems on LeetCode, mentoring fellow developers, 
+              When I&apos;m not coding, I&apos;m either mentoring fellow developers, 
               or exploring the latest in blockchain technology.
             </p>
           </motion.div>

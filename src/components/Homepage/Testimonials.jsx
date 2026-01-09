@@ -27,7 +27,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      text: "Currently developing responsive, high-performance frontends for Web3 dashboards at GPU.Net, where I collaborate with backend and blockchain teams to ship production-ready features. My expertise in React, Next.js, and TypeScript enables me to build scalable applications that bridge traditional web development with cutting-edge blockchain technology.",
+      text: "Currently developing GPU.Net, a decentralized GPU rental platform that leverages blockchain technology to connect GPU providers with users in need of high-performance computing power. This innovative solution aims to make GPU resources more accessible and affordable for developers, researchers, and AI enthusiasts worldwide.",
       author: "Full Stack Developer",
       position: "GPU.Net • Oct 2025 - Present",
     },
@@ -39,9 +39,9 @@ const Testimonials = () => {
     },
     {
       id: 3,
-      text: "Built 12+ live projects spanning Web3, full-stack applications, and developer tools. From ChainUPI's revolutionary multi-chain crypto payments to PRISTINE UI component library, my work focuses on creating scalable solutions that solve real-world problems. Solved 100+ problems on LeetCode and won 1st position at HackSphere Hackathon.",
+      text: "Built 20+ live projects spanning Web3, full-stack applications, and developer tools. From ChainUPI's revolutionary multi-chain crypto payments to PRISTINE UI component library, my work focuses on creating scalable solutions that solve real-world problems. Solved 100+ problems on LeetCode and won 1st position at HackSphere Hackathon.",
       author: "Builder & Problem Solver",
-      position: "17+ Projects • 100+ LeetCode Problems",
+      position: "20+ Projects • 100+ LeetCode Problems",
     },
   ];
 
@@ -199,10 +199,9 @@ const Testimonials = () => {
           ref={headerRef}
           className="relative z-10 mx-auto mb-16 flex max-w-lg"
         >
-          <h2 className="font-nohemi-c mb-2 text-3xl">
-            <span className="text-gray mb-2 text-xs">(Testimonials) </span>
-            Great things happen when creativity meets strategy. But don't just
-            take our word for it—see what our clients have to say!
+          <h2 className="font-nohemi-c mb-2 text-7xl">
+            <span className="text-gray mb-2 text-xs">(Achivements) </span>
+            What I've Built & Accomplished
           </h2>
         </div>
       </div>

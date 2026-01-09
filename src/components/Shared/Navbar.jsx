@@ -1,9 +1,8 @@
 import React, { useState } from "react";
+import logo from "../../assets/logo.png";
 import { Link as ScrollLink } from 'react-scroll';
-import { Link } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
-import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 const navVariants = {
   hidden: { y: -80, opacity: 0 },
@@ -59,16 +58,10 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", to: "hero" },
+    { name: "Home", to: "" },
     { name: "About", to: "about" },
-    { name: "Work", to: "projects" },
-    { name: "Contact", to: "contact" },
-  ];
-
-  const socialLinks = [
-    { icon: FiGithub, href: "https://github.com/gamandeepsingh", label: "GitHub" },
-    { icon: FiLinkedin, href: "https://www.linkedin.com/in/gamandeep-singh-344001256/", label: "LinkedIn" },
-    { icon: FiTwitter, href: "https://x.com/gamandeepsingh4", label: "Twitter" },
+    { name: "Projects", to: "projects" },
+    { name: "Contact", to: "#contact" },
   ];
 
   return (
@@ -76,84 +69,128 @@ const Navbar = () => {
     variants={navVariants}
       initial="hidden"
       animate="visible"
-      className="bg-dark/80 fixed top-0 right-0 left-0 z-50 flex max-h-20 w-screen items-center justify-between mx-auto py-4 backdrop-blur-md px-4 md:px-8 border-b border-white/5"
+      className="bg-dark-blur absolute top-0 right-0 left-0 z-40 flex max-h-20 w-full items-center justify-between mx-auto py-6 backdrop-blur-sm px-3 md:px-0"
     >
       
       <div className="flex w-full max-w-7xl mx-auto items-center justify-between">
-        {/* Logo/Name */}
+        {/* Left Links */}
+      <div className="hidden flex-1 items-center justify-between md:flex">
         <motion.div
-          variants={logoVariants}
+          variants={linkVariants}
           initial="hidden"
           animate="visible"
-          className="flex items-center"
+          className="flex items-center space-x-2"
         >
-          <Link to="/" className="group flex items-center gap-2">
-            <div className="relative">
-              <span className="font-nohemi text-xl font-bold text-white tracking-tight">
-                GHOST
-              </span>
-              <motion.div 
+          <ScrollLink
+            to={navLinks[0].to}
+            smooth={true} duration={1000} offset={0}
+            className="group hover:text-opacity-80 font-nohemi-thin text-sm tracking-wider text-white transition-colors cursor-pointer"
+          >
+            {navLinks[0].name}
+            <motion.div 
                 className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"
                 whileHover={{ width: "100%" }}
               />
-            </div>
-          </Link>
+          </ScrollLink>
         </motion.div>
-
-        {/* Center Links */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link, i) => (
-            <motion.div
-              key={link.name}
-              variants={linkVariants}
-              custom={i}
-              initial="hidden"
-              animate="visible"
-            >
-              <ScrollLink
-                to={link.to}
-                smooth={true}
-                duration={1000}
-                offset={-80}
-                className="relative font-nohemi-thin text-sm tracking-wider text-gray-300 hover:text-white transition-colors cursor-pointer group"
-              >
-                {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary group-hover:w-full transition-all duration-300" />
-              </ScrollLink>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Social Links & Resume */}
-        <div className="hidden md:flex items-center gap-4">
-          {socialLinks.map((social) => (
-            <motion.a
-              key={social.label}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
-              whileHover={{ scale: 1.1, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <social.icon size={18} />
-            </motion.a>
-          ))}
-          <motion.a
-            href="mailto:gamandeepsingh6@gmail.com"
-            className="ml-4 px-4 py-2 text-sm font-nohemi-thin bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-full text-white transition-all duration-300"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+        <div className="text-opacity-50 text-white">/</div>
+        <motion.div
+          variants={linkVariants}
+          initial="hidden"
+          animate="visible"
+          className="flex items-center space-x-2"
+        >
+          <ScrollLink
+            to={navLinks[1].to}
+            smooth={true} duration={1000} offset={0}
+            className="group hover:text-opacity-80 font-nohemi-thin text-sm tracking-wider text-white transition-colors cursor-pointer"
           >
-            Let&apos;s Talk
-          </motion.a>
-        </div>
+            {navLinks[1].name}
+            <motion.div 
+                className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"
+                whileHover={{ width: "100%" }}
+              />
+          </ScrollLink>
+        </motion.div>
+      </div>
+
+      {/* Logo Center */}
+      <motion.div
+        variants={logoVariants}
+        initial="hidden"
+        animate="visible"
+        className="flex max-h-12 flex-1 items-center justify-start md:justify-center"
+      >
+        <img
+          src={logo}
+          alt="Elanine Creatives"
+          loading="lazy"
+          className="aspect-square rounded-full max-h-12 object-contain"
+        />
+      </motion.div>
+
+      {/* Right Links */}
+      <div className="hidden flex-1 items-center justify-between md:flex">
+        <motion.div
+          variants={linkVariants}
+          initial="hidden"
+          animate="visible"
+          className="flex items-center space-x-2"
+        >
+          <ScrollLink
+            to={navLinks[2].to}
+            smooth={true} duration={1000} offset={0}
+            className="group hover:text-opacity-80 font-nohemi-thin text-sm tracking-wider text-white transition-colors cursor-pointer"
+          >
+            {navLinks[2].name}
+            <motion.div 
+                className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"
+                whileHover={{ width: "100%" }}
+              />
+          </ScrollLink>
+        </motion.div>
+        <div className="text-opacity-50 text-white">/</div>
+        <motion.div
+          variants={linkVariants}
+          initial="hidden"
+          animate="visible"
+          className="flex items-center space-x-2"
+        >
+          <ScrollLink
+            to={navLinks[3].to}
+            smooth={true} duration={1000} offset={0}
+            className="group flex hover:text-opacity-80 font-nohemi-thin text-sm tracking-wider text-white transition-colors cursor-pointer"
+          >
+            {navLinks[3].name}
+            <motion.div 
+                className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"
+                whileHover={{ width: "100%" }}
+              />
+            <motion.svg
+                  initial={{ rotate: -45 }}
+                  animate={{ rotate: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="ml-1 h-4 w-4 transform transition-transform group-hover:rotate-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </motion.svg>
+          </ScrollLink>
+        </motion.div>
+      </div>
 
       {/* Mobile menu toggle */}
       <div className="md:hidden">
         <motion.button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="text-white focus:outline-none font-nohemi-thin text-sm"
+          className="text-white focus:outline-none"
           whileTap={{ scale: 0.9 }}
         >
           {isMenuOpen ? "Close" : "Menu"}
@@ -164,13 +201,13 @@ const Navbar = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="fixed top-20 right-0 left-0 bg-dark/95 backdrop-blur-lg p-6 md:hidden border-b border-white/5"
+            className="absolute top-full right-0 left-0 bg-black p-4 md:hidden"
             initial="hidden"
             animate="visible"
             exit="exit"
             variants={mobileMenuVariants}
           >
-            <div className="flex flex-col space-y-6">
+            <div className="flex flex-col space-y-4">
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.name}
@@ -181,31 +218,32 @@ const Navbar = () => {
                 >
                   <ScrollLink
                     to={link.to}
-                    smooth={true}
-                    duration={1000}
-                    offset={-80}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="font-nohemi-thin text-lg tracking-wider text-gray-300 hover:text-white transition-colors cursor-pointer"
+                    smooth={true} duration={1000} offset={0}
+                    className="group hover:text-opacity-80 font-nohemi-thin group flex items-center text-sm tracking-wider text-white transition-colors cursor-pointer"
                   >
                     {link.name}
+                    <motion.div 
+                      className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"
+                      whileHover={{ width: "100%" }}
+                    />
+                    {link.name === "Inquiries" && (
+                      <svg
+                        className="ml-1 h-4 w-4 -rotate-45 transform transition-transform duration-300 group-hover:rotate-0"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        />
+                      </svg>
+                    )}
                   </ScrollLink>
                 </motion.div>
               ))}
-              
-              {/* Mobile Social Links */}
-              <div className="flex items-center gap-6 pt-4 border-t border-white/10">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    <social.icon size={20} />
-                  </a>
-                ))}
-              </div>
             </div>
           </motion.div>
         )}
