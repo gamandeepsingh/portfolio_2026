@@ -21,7 +21,7 @@ const About = () => {
   const highlights = [
     "Currently building Web3 GPU.Net",
     "Tech lead at INNOGEEKS technical community",
-    "Done 5+ Freelance Projects",
+    "Shipped 5+ Freelance Projects",
     "Winner of HackSphere Hackathon & SIH Finalist",
   ];
 
