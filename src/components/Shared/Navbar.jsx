@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.png";
-import { Link as ScrollLink } from 'react-scroll';
+import { Link as ScrollLink, scroller } from 'react-scroll';
+import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -56,13 +57,36 @@ const logoVariants = {
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHomePage = location.pathname === '/';
 
   const navLinks = [
-    { name: "Home", to: "" },
-    { name: "About", to: "about" },
-    { name: "Projects", to: "projects" },
-    { name: "Contact", to: "contact" },
+    { name: "Home", to: "", type: "scroll" },
+    { name: "About", to: "about", type: "scroll" },
+    { name: "Projects", to: "/projects", type: "route" },
+    { name: "Contact", to: "contact", type: "scroll" },
   ];
+
+  const handleScrollLink = (to) => {
+    if (isHomePage) {
+      scroller.scrollTo(to, {
+        smooth: true,
+        duration: 1000,
+        offset: 0,
+      });
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        scroller.scrollTo(to, {
+          smooth: true,
+          duration: 1000,
+          offset: 0,
+        });
+      }, 100);
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <motion.nav
@@ -81,9 +105,8 @@ const Navbar = () => {
           animate="visible"
           className="flex items-center space-x-2"
         >
-          <ScrollLink
-            to={navLinks[0].to}
-            smooth={true} duration={1000} offset={0}
+          <span
+            onClick={() => handleScrollLink(navLinks[0].to)}
             className="group hover:text-opacity-80 font-nohemi-thin text-sm tracking-wider text-white transition-colors cursor-pointer"
           >
             {navLinks[0].name}
@@ -91,7 +114,7 @@ const Navbar = () => {
                 className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"
                 whileHover={{ width: "100%" }}
               />
-          </ScrollLink>
+          </span>
         </motion.div>
         <div className="text-opacity-50 text-white">/</div>
         <motion.div
@@ -100,9 +123,8 @@ const Navbar = () => {
           animate="visible"
           className="flex items-center space-x-2"
         >
-          <ScrollLink
-            to={navLinks[1].to}
-            smooth={true} duration={1000} offset={0}
+          <span
+            onClick={() => handleScrollLink(navLinks[1].to)}
             className="group hover:text-opacity-80 font-nohemi-thin text-sm tracking-wider text-white transition-colors cursor-pointer"
           >
             {navLinks[1].name}
@@ -110,7 +132,7 @@ const Navbar = () => {
                 className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"
                 whileHover={{ width: "100%" }}
               />
-          </ScrollLink>
+          </span>
         </motion.div>
       </div>
 
@@ -121,12 +143,14 @@ const Navbar = () => {
         animate="visible"
         className="flex max-h-12 flex-1 items-center justify-start md:justify-center"
       >
-        <img
-          src={logo}
-          alt="Elanine Creatives"
-          loading="lazy"
-          className="aspect-square rounded-full max-h-12 object-contain"
-        />
+        <RouterLink to="/">
+          <img
+            src={logo}
+            alt="Elanine Creatives"
+            loading="lazy"
+            className="aspect-square rounded-full max-h-12 object-contain"
+          />
+        </RouterLink>
       </motion.div>
 
       {/* Right Links */}
@@ -137,9 +161,8 @@ const Navbar = () => {
           animate="visible"
           className="flex items-center space-x-2"
         >
-          <ScrollLink
+          <RouterLink
             to={navLinks[2].to}
-            smooth={true} duration={1000} offset={0}
             className="group hover:text-opacity-80 font-nohemi-thin text-sm tracking-wider text-white transition-colors cursor-pointer"
           >
             {navLinks[2].name}
@@ -147,7 +170,7 @@ const Navbar = () => {
                 className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"
                 whileHover={{ width: "100%" }}
               />
-          </ScrollLink>
+          </RouterLink>
         </motion.div>
         <div className="text-opacity-50 text-white">/</div>
         <motion.div
@@ -156,9 +179,8 @@ const Navbar = () => {
           animate="visible"
           className="flex items-center space-x-2"
         >
-          <ScrollLink
-            to={navLinks[3].to}
-            smooth={true} duration={1000} offset={0}
+          <span
+            onClick={() => handleScrollLink(navLinks[3].to)}
             className="group flex hover:text-opacity-80 font-nohemi-thin text-sm tracking-wider text-white transition-colors cursor-pointer"
           >
             {navLinks[3].name}
@@ -182,7 +204,7 @@ const Navbar = () => {
                     d="M14 5l7 7m0 0l-7 7m7-7H3"
                   />
                 </motion.svg>
-          </ScrollLink>
+          </span>
         </motion.div>
       </div>
 
@@ -216,32 +238,45 @@ const Navbar = () => {
                   initial="hidden"
                   animate="visible"
                 >
-                  <ScrollLink
-                    to={link.to}
-                    smooth={true} duration={1000} offset={0}
-                    className="group hover:text-opacity-80 font-nohemi-thin group flex items-center text-sm tracking-wider text-white transition-colors cursor-pointer"
-                  >
-                    {link.name}
-                    <motion.div 
-                      className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"
-                      whileHover={{ width: "100%" }}
-                    />
-                    {link.name === "Inquiries" && (
-                      <svg
-                        className="ml-1 h-4 w-4 -rotate-45 transform transition-transform duration-300 group-hover:rotate-0"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        />
-                      </svg>
-                    )}
-                  </ScrollLink>
+                  {link.type === "route" ? (
+                    <RouterLink
+                      to={link.to}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="group hover:text-opacity-80 font-nohemi-thin group flex items-center text-sm tracking-wider text-white transition-colors cursor-pointer"
+                    >
+                      {link.name}
+                      <motion.div 
+                        className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"
+                        whileHover={{ width: "100%" }}
+                      />
+                    </RouterLink>
+                  ) : (
+                    <span
+                      onClick={() => handleScrollLink(link.to)}
+                      className="group hover:text-opacity-80 font-nohemi-thin group flex items-center text-sm tracking-wider text-white transition-colors cursor-pointer"
+                    >
+                      {link.name}
+                      <motion.div 
+                        className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"
+                        whileHover={{ width: "100%" }}
+                      />
+                      {link.name === "Contact" && (
+                        <svg
+                          className="ml-1 h-4 w-4 -rotate-45 transform transition-transform duration-300 group-hover:rotate-0"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          />
+                        </svg>
+                      )}
+                    </span>
+                  )}
                 </motion.div>
               ))}
             </div>
