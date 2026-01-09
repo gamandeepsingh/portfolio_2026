@@ -62,7 +62,7 @@ const Navbar = () => {
   const isHomePage = location.pathname === '/';
 
   const navLinks = [
-    { name: "Home", to: "", type: "scroll" },
+    { name: "Experiences", to: "experience", type: "scroll" },
     { name: "About", to: "about", type: "scroll" },
     { name: "Projects", to: "/projects", type: "route" },
     { name: "Contact", to: "contact", type: "scroll" },

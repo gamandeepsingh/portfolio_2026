@@ -32,7 +32,7 @@ const Services = () => {
     }, []);
 
     return (
-        <div ref={sectionRef} className="relative min-h-screen w-full bg-dark px-4 sm:px-8 py-24 sm:py-32" id="services">
+        <div ref={sectionRef} className="relative min-h-screen w-full bg-dark px-4 sm:px-8 py-24 sm:py-32" id="experience">
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]" />
