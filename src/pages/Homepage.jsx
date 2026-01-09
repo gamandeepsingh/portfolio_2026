@@ -5,6 +5,7 @@ import Hero from "../components/Homepage/Hero";
 import About from "../components/Homepage/About";
 import SolarBall from "../components/Homepage/SolarBall";
 import ProjectsGrid from "../components/Homepage/ProjectsGrid";
+import TechStack from "../components/Homepage/TechStack";
 import Services from "../components/Homepage/Services";
 import Testimonials from "../components/Homepage/Testimonials";
 import Contact from "../components/Homepage/Contact";
@@ -172,16 +173,19 @@ const Homepage = () => {
       <Hero />
       <About />
       <SolarBall />
+      <Services />
       {/* <TunnelAnimation/> */}
       {/* Projects Grid Section */}
       <div ref={projectsGridRef} className="relative z-10">
         <ProjectsGrid ref={globeRef} globeContainerRef={globeContainerRef} />
       </div>
 
+      <TechStack />
+
       <div className="max-w-screen overflow-x-hidden relative z-30 bg-transparent">
         {/* <StackProject /> */}
-        <Services />
-        <Testimonials />
+        
+        {/* <Testimonials /> */}
         <Contact />
       </div>
     </div>

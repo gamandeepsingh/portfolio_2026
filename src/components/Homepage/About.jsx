@@ -15,10 +15,7 @@ const About = () => {
   const [textSize, setTextSize] = useState(window.innerWidth < 640 ? '5xl' : '9xl');
 
   const stats = [
-    { number: "20+", label: "Live Projects", icon: FiZap },
-    { number: "100+", label: "Problems Solved", icon: FiCode },
-    { number: "250+", label: "Team Members Led", icon: FiLayers },
-    { number: "4+", label: "Awards Won", icon: FiAward },
+    // Stat items
   ];
 
   const highlights = [
