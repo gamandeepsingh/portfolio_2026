@@ -32,7 +32,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-nohemi text-2xl text-white">Gamandeep Singh</h3>
             <p className="font-nohemi-thin text-gray-500 text-sm max-w-xs">
-              Full Stack Web3 Developer crafting digital experiences.
+              Full Stack Developer crafting digital experiences.
             </p>
           </div>
 
@@ -84,7 +84,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 border-t border-white/5">
+        <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 pt-8 border-t border-white/5">
           <p className="">
           </p>
 

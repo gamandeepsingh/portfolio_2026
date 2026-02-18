@@ -136,7 +136,7 @@ const Projectdetail = () => {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary/90 rounded-full text-dark font-nohemi text-sm transition-all"
+              className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary/90 rounded-full text-light font-nohemi text-sm transition-all"
             >
               Live Site
               <FiExternalLink size={16} />
@@ -318,7 +318,7 @@ const Projectdetail = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-primary hover:bg-primary/90 text-dark font-nohemi rounded-xl transition-all"
+                    className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-primary hover:bg-primary/90 text-light font-nohemi rounded-xl transition-all"
                   >
                     View Live Site
                     <FiExternalLink size={16} />

@@ -198,20 +198,20 @@ const Contact = () => {
                 className="flex-1 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-white/10 hover:bg-white/[0.04] transition-all text-center group"
                 whileHover={{ y: -2 }}
               >
-                <span className="text-gray-400 font-nohemi-thin text-sm group-hover:text-white transition-colors">
-                  View my Projects ↗
+                <span className="text-gray-400 font-nohemi-thin text-sm group-hover:text-white transition-colors flex items-center justify-center gap-2">
+                  View my Projects <FiArrowUpRight className="text-gray-400 w-6 h-6 group-hover:text-white group-hover:rotate-45 transition-transform duration-300" />
                 </span>
               </Link>
               
               <motion.a
-                href="https://drive.google.com/file/d/1bU1rLxH6JApubYos_kVn9Y8nDkAglQul/view?usp=sharing"
+                href="https://drive.google.com/file/d/1dfMjLGdrJGh04ZXEi7lFTFm_CnAKXhJn/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-white/10 hover:bg-white/[0.04] transition-all text-center group"
                 whileHover={{ y: -2 }}
               >
-                <span className="text-gray-400 font-nohemi-thin text-sm group-hover:text-white transition-colors">
-                  Wanna see my Resume ↗
+                <span className="text-gray-400 font-nohemi-thin text-sm group-hover:text-white transition-colors flex items-center justify-center gap-2">
+                  Wanna see my Resume <FiArrowUpRight className="text-gray-400 w-6 h-6 group-hover:text-white group-hover:rotate-45 transition-transform duration-300" />
                 </span>
               </motion.a>
             </div>

@@ -6,8 +6,7 @@ import Homepage from "./pages/Homepage";
 import Navbar from "./components/Shared/Navbar";
 import Footer from "./components/Shared/Footer";
 import Projectdetail from "./pages/Projectdetail";
-import AllProjects from "./pages/AllProjects";
-import { useDispatch } from 'react-redux';
+import AllProjects from "./pages/AllProjects";import NotFound from './pages/NotFound';import { useDispatch } from 'react-redux';
 import { fetchProjects } from './store/slices/projectSlice';
 
 function App() {
@@ -53,6 +52,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/projects" element={<AllProjects />} />
         <Route path="/project/:slug" element={<Projectdetail />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>
     </>

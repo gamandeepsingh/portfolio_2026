@@ -10,8 +10,8 @@ const techStack = {
     languages: [
         { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
         { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
-        { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
         { name: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
+        { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
         { name: 'Solidity', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg' },
         { name: 'Rust', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg' },
         { name: 'C', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg' },
@@ -133,7 +133,7 @@ const TechStack = () => {
                                         whileHover={{ scale: 1.05, y: -5 }}
                                         transition={{ type: "spring", stiffness: 400, damping: 17 }}
                                     >
-                                        <div className={`relative flex items-center gap-3 px-3 py-2 rounded-sm backdrop-blur-sm border border-white/5 hover:border-primary/50 transition-all duration-300`}>
+                                        <div className={`relative flex items-center gap-3 px-3 py-2 rounded-sm backdrop-blur-sm transition-all duration-300`}>
                                             
                                             {/* Icon */}
                                             <div className="relative w-6 h-6 flex-shrink-0">
