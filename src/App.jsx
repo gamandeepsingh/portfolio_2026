@@ -8,6 +8,7 @@ import Footer from "./components/Shared/Footer";
 import Projectdetail from "./pages/Projectdetail";
 import AllProjects from "./pages/AllProjects";import NotFound from './pages/NotFound';import { useDispatch } from 'react-redux';
 import { fetchProjects } from './store/slices/projectSlice';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const dispatch = useDispatch();
@@ -55,6 +56,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>
+      <Analytics />
     </>
   );
 }
