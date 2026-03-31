@@ -9,6 +9,7 @@ import Projectdetail from "./pages/Projectdetail";
 import AllProjects from "./pages/AllProjects";import NotFound from './pages/NotFound';import { useDispatch } from 'react-redux';
 import { fetchProjects } from './store/slices/projectSlice';
 import { Analytics } from "@vercel/analytics/react"
+import GhostCursor from './components/Shared/GhostCursor'
 
 function App() {
   const dispatch = useDispatch();
@@ -48,6 +49,7 @@ function App() {
 
   return (
     <>
+      <GhostCursor />
       {!isProjectDetailPage && <Navbar />}
       <Routes>
         <Route path="/" element={<Homepage />} />

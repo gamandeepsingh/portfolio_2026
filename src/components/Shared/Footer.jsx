@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiArrowUp } from "react-icons/fi";
 import { Link as ScrollLink } from "react-scroll";
 import { personalInfo } from "../../utils/data";
-import { BiHeart } from "react-icons/bi";
 import ghostImage from "../../assets/ghost.png";
 
 const Footer = () => {

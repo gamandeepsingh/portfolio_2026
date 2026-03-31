@@ -179,12 +179,12 @@ const Projectdetail = () => {
                   <FiCalendar size={12} />
                   {project.year}
                 </span>
-                {project.category && (
-                  <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 text-white/70 text-xs font-nohemi-thin">
+                {project.category?.map((cat) => (
+                  <span key={cat} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 text-white/70 text-xs font-nohemi-thin">
                     <FiTag size={12} />
-                    {project.category}
+                    {cat}
                   </span>
-                )}
+                ))}
               </div>
 
               {/* Title */}

@@ -155,15 +155,15 @@ const About = () => {
           >
             <p className="font-nohemi-thin text-gray-400 text-lg leading-relaxed">
               I&apos;m a <span className="text-white">Full Stack Web3 Developer</span> based in Bengaluru, 
-              currently pursuing my B.Tech in Computer Science at KIET Group of Institutions with a 
+              currently in final year of my Computer Science degree with a
               <span className="text-white"> CGPA of 9/10</span>.
             </p>
             <p className="font-nohemi-thin text-gray-400 text-lg leading-relaxed">
-              My expertise spans across <span className="text-white">React, Next.js, Node.js, and Web3 technologies</span>. 
+              My expertise spans across <span className="text-white">React, Next.js, Node.js, Solana and Web3 technologies</span>. 
               I&apos;m passionate about building scalable applications and contributing to open-source projects.
             </p>
             <p className="font-nohemi-thin text-gray-400 text-lg leading-relaxed">
-              When I&apos;m not coding, I&apos;m either mentoring fellow developers, 
+              When I&apos;m not coding, I&apos;m either mentoring fellow developers 
               or exploring the latest in blockchain technology.
             </p>
           </motion.div>

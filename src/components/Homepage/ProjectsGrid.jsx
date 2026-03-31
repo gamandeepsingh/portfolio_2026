@@ -318,6 +318,16 @@ const ProjectsGrid = forwardRef(({ globeContainerRef }, ref) => {
             />
           ))}
         </div>
+
+        {/* many more button */}
+        <Link
+              to="/projects"
+              className="group/link mt-10 w-full flex items-center justify-center gap-2 text-gray-400 hover:text-white font-nohemi-thin text-sm transition-colors duration-300"
+            >
+                <span className="w-12 h-px bg-gradient-to-r from-transparent to-white/20" />
+                <span>& many more</span>
+                <span className="w-12 h-px bg-gradient-to-l from-transparent to-white/20" />
+            </Link>
       </div>
     </section>
   );

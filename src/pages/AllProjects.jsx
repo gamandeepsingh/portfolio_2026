@@ -98,7 +98,7 @@ const ProjectCard = ({ project, index, onEnter, onLeave, onMove }) => {
                 </span>
               </div>
               <span className="font-nohemi-thin text-[10px] text-white/20 uppercase tracking-wider">
-                {project.category}
+                {project.category?.join(' · ')}
               </span>
             </div>
 
@@ -222,7 +222,7 @@ const AllProjects = () => {
       if (selectedCategory === 'all') {
         setFilteredProjects(projectData);
       } else {
-        setFilteredProjects(projectData.filter((p) => p.category === selectedCategory));
+        setFilteredProjects(projectData.filter((p) => p.category?.includes(selectedCategory)));
       }
     }
   }, [selectedCategory, projectData]);
@@ -291,7 +291,7 @@ const AllProjects = () => {
               const count =
                 cat.id === 'all'
                   ? projectData?.length || 0
-                  : projectData?.filter((p) => p.category === cat.id).length || 0;
+                  : projectData?.filter((p) => p.category?.includes(cat.id)).length || 0;
 
               if (cat.id !== 'all' && count === 0) return null;
 
@@ -299,7 +299,7 @@ const AllProjects = () => {
                 <button
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
-                  className={`px-4 py-1.5 rounded-full font-nohemi-thin text-[12px] tracking-wide transition-all duration-300 ${
+                  className={`px-4 py-1.5 rounded-full font-nohemi-thin text-[12px] tracking-wide transition-all duration-300 cursor-pointer ${
                     selectedCategory === cat.id
                       ? 'bg-primary text-white shadow-[0_0_16px_rgba(37,85,220,0.25)]'
                       : 'bg-white/4 text-gray-500 hover:bg-white/7 hover:text-gray-300'

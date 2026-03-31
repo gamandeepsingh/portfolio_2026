@@ -9,7 +9,6 @@ import TechStack from "../components/Homepage/TechStack";
 import Services from "../components/Homepage/Services";
 import Testimonials from "../components/Homepage/Testimonials";
 import Contact from "../components/Homepage/Contact";
-import MouseMoveLineDrawing from "../components/Shared/MouseMoveLineDrawing";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -169,8 +168,7 @@ const Homepage = () => {
 
   return (
     <div className="relative">
-      <MouseMoveLineDrawing />
-      <Hero />
+<Hero />
       <About />
       <SolarBall />
       <Services />

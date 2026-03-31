@@ -1,5 +1,85 @@
 @import "tailwindcss";
 
+/* ── Ghost Cursor ─────────────────────────────────────────── */
+.ghost {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transform-origin: center;
+  width: 81px;
+  margin: 18px 0 0 -41px;
+  pointer-events: none;
+}
+
+.ghost__eyes,
+.ghost__mouth {
+  position: absolute;
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  top: 31px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+  background: #0C0C0C;
+  margin-left: -18px;
+  transform-origin: center;
+}
+
+.ghost__eyes {
+  box-shadow: 36px 0 0 #0C0C0C;
+}
+
+.ghost__mouth {
+  margin: 0;
+  top: 54px;
+  transform: scale(0);
+  border-radius: 18px 18px 11px 11px;
+  width: 18px;
+  transform-origin: center bottom;
+  overflow: hidden;
+}
+
+.ghost__tail {
+  position: absolute;
+  z-index: -1;
+  top: 74px;
+  height: 50px;
+  width: 100%;
+  filter: url(#goo);
+}
+
+.ghost__tail::before {
+  content: '';
+  background: #fff;
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  height: 90px;
+  width: 100%;
+  border-radius: 36px 36px 5px 5px;
+}
+
+.ghost__rip {
+  width: 14px;
+  height: 25px;
+  background: #fff;
+  position: absolute;
+  top: 14px;
+  left: 0;
+  box-shadow: -56px 0 0 #fff, -28px 0 0 #fff, 28px 0 0 #fff, 56px 0 0 #fff, 84px 0 0 #fff;
+  border-radius: 50%;
+  animation: ghost-rips 1.2s linear infinite;
+}
+
+@keyframes ghost-rips {
+  0%   { left: 0;    top: 11px; }
+  50%  { left: 28px; top: 18px; }
+  100% { left: 56px; top: 11px; }
+}
+/* ────────────────────────────────────────────────────────── */
+
 @font-face {
     font-family: "nohemi";
     src: url("./fonts/Nohemi-Medium-BF6438cc581a509.otf");
