@@ -308,7 +308,7 @@ export const projectData = [
     technologies: ["ReactJS", "Typescript", "Google Maps API", "Zoom SDK", "NodeJS", "Prisma", "Large Datasets", "Multiple Languages"],
     image: "https://res.cloudinary.com/dib0peewu/image/upload/v1767967586/2a182ce8-1797-4e7a-b8a6-e186b1e12699.png",
     link: "https://jaagran-patra.vercel.app/",
-    github: null,
+    github: "https://github.com/gamandeepsingh/jaagran-patra",
     category: ["ui", "web"],
     status: "Completed",
     year: "2024",
