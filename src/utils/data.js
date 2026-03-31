@@ -298,7 +298,7 @@ export const projectData = [
     category: ["ui", "web"],
     status: "Completed",
     year: "2024",
-    slug: { current: "pristine-ui-library" },
+    slug: { current: "vayu" },
   },
   {
     id: "jaagran-patra",
@@ -312,7 +312,7 @@ export const projectData = [
     category: ["ui", "web"],
     status: "Completed",
     year: "2024",
-    slug: { current: "pristine-ui-library" },
+    slug: { current: "jaagran-patra" },
   },
   {
     id: "listerji",
