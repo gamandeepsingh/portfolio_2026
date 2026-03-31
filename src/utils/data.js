@@ -209,7 +209,7 @@ export const projectData = [
     image: "https://res.cloudinary.com/dib0peewu/image/upload/v1774971295/Screenshot_2026-03-31_at_9.04.44_PM_akmb58.png",
     link: "https://superteam.gamandeep.xyz/",
     github: "https://github.com/gamandeepsingh/superteam",
-    category: ["tool", "web"],
+    category: ["ui", "web"],
     status: "Live",
     year: "2026",
     slug: { current: "superteam-builder" },
