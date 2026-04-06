@@ -39,6 +39,8 @@ const Navbar = () => {
           }
         }
         setActiveSection(current);
+      } else {
+        setActiveSection('');
       }
     };
     window.addEventListener('scroll', onScroll, { passive: true });
