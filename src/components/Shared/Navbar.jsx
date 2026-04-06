@@ -8,6 +8,7 @@ import { personalInfo } from "../../utils/data";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled]     = useState(false);
+  const [activeSection, setActiveSection] = useState("");
   const location  = useLocation();
   const navigate  = useNavigate();
   const isHomePage = location.pathname === '/';
@@ -16,15 +17,34 @@ const Navbar = () => {
     { name: "Experience", to: "experience", type: "scroll" },
     { name: "About",      to: "about",      type: "scroll" },
     { name: "Projects",   to: "/projects",  type: "route"  },
+    { name: "Blog",       to: "/blog",      type: "route"  },
     { name: "Contact",    to: "contact",    type: "scroll" },
   ];
 
   /* ── Scroll detection ── */
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 30);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 30);
+      if (location.pathname === '/') {
+        const sections = ['experience', 'about', 'contact', 'projects'];
+        let current = '';
+        for (let section of sections) {
+          const el = document.getElementById(section);
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            // middle of the screen
+            if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+              current = section;
+            }
+          }
+        }
+        setActiveSection(current);
+      }
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // initial check
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [location.pathname]);
 
   /* ── Body scroll lock ── */
   useEffect(() => {
@@ -77,8 +97,8 @@ const Navbar = () => {
 
           {/* ── Left links (desktop) ── */}
           <div className="hidden md:flex items-center">
-            <NavBtn onClick={() => handleScrollLink('experience')}>Experience</NavBtn>
-            <NavBtn onClick={() => handleScrollLink('about')}>About</NavBtn>
+            <NavBtn onClick={() => handleScrollLink('experience')} isActive={activeSection === 'experience'}>Experience</NavBtn>
+            <NavBtn onClick={() => handleScrollLink('about')} isActive={activeSection === 'about'}>About</NavBtn>
           </div>
 
           {/* ── Logo ── */}
@@ -98,21 +118,25 @@ const Navbar = () => {
           <div className="hidden md:flex items-center">
             <RouterLink
               to="/projects"
-              className="px-3 py-1.5 rounded-full font-nohemi-thin text-[13px] text-white/50
-                hover:text-white hover:bg-white/5 transition-all duration-200"
+              className={`px-3 py-1.5 rounded-full font-nohemi-thin text-[13px] transition-all duration-200 ${
+                location.pathname.startsWith('/project') 
+                  ? "text-white bg-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]" 
+                  : "text-white/50 hover:text-white hover:bg-white/5"
+              }`}
             >
               Projects
             </RouterLink>
-            <button
-              onClick={() => handleScrollLink('contact')}
-              className="ml-1 px-3.5 py-1.5 rounded-full font-nohemi-thin text-[13px] text-white/75
-                bg-white/7 hover:bg-white/11
-                border border-white/9 hover:border-white/15
-                shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]
-                transition-all duration-200 cursor-pointer"
+            <RouterLink
+              to="/blog"
+              className={`px-3 py-1.5 rounded-full font-nohemi-thin text-[13px] transition-all duration-200 ${
+                location.pathname.startsWith('/blog')
+                  ? "text-white bg-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]" 
+                  : "text-white/50 hover:text-white hover:bg-white/5"
+              }`}
             >
-              Contact
-            </button>
+              Blog
+            </RouterLink>
+            <NavBtn onClick={() => handleScrollLink('contact')} isActive={activeSection === 'contact'}>Contact</NavBtn>
           </div>
 
           {/* ── Mobile hamburger ── */}
@@ -190,8 +214,11 @@ const Navbar = () => {
                       <span className="font-nohemi-thin text-[10px] text-white/20 tracking-widest tabular-nums select-none">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      <span className="font-nohemi text-[clamp(1.9rem,7.5vw,3rem)] text-white/70 leading-none tracking-tight
-                        group-hover:text-white transition-colors duration-150">
+                      <span className={`font-nohemi text-[clamp(1.9rem,7.5vw,3rem)] leading-none tracking-tight transition-colors duration-150 ${
+                        (link.type === 'route' ? location.pathname.startsWith(link.to) : activeSection === link.to)
+                          ? "text-white"
+                          : "text-white/70 group-hover:text-white"
+                      }`}>
                         {link.name}
                       </span>
                     </button>
@@ -250,11 +277,14 @@ const Navbar = () => {
 };
 
 /* ─── Reusable nav button (scroll targets) ─── */
-const NavBtn = ({ children, onClick }) => (
+const NavBtn = ({ children, onClick, isActive }) => (
   <button
     onClick={onClick}
-    className="px-3 py-1.5 rounded-full font-nohemi-thin text-[13px] text-white/50
-      hover:text-white hover:bg-white/5 transition-all duration-200 cursor-pointer"
+    className={`px-3 py-1.5 rounded-full font-nohemi-thin text-[13px] transition-all duration-200 cursor-pointer ${
+      isActive 
+        ? "text-white bg-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]" 
+        : "text-white/50 hover:text-white hover:bg-white/5"
+    }`}
   >
     {children}
   </button>

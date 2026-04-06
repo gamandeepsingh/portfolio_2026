@@ -507,3 +507,43 @@ export const certifications = [
     link: "https://drive.google.com/file/d/1k6x2aZVOqKEFupaj1wuS8MGOqcMl49rN/view",
   },
 ];
+
+
+export const blogs = [
+  {
+    title: "Building a Real-Time Solana Indexer in Rust: A Complete Guide",
+    shortDescription: "A comprehensive guide to building a real-time Solana indexer in Rust, covering architecture, implementation, and best practices for streaming and processing blockchain data.",
+    image: "https://res.cloudinary.com/dib0peewu/image/upload/v1775474307/blog1_vq7lxr.png",
+    link: "https://medium.com/@gamandeepsingh4/building-a-real-time-solana-indexer-in-rust-a-complete-guide-edcf64119691",
+    date: "March 2026",
+    tag: "Engineering",
+    readTime: "8 min read"
+  },
+  {
+    title: "From Stripe to Solana: Why I Built a Web3 Payment Widget That Actually Works",
+    shortDescription: "A deep dive into the development of a Solana Pay widget, covering design decisions, technical challenges, and lessons learned.",
+    image: "https://res.cloudinary.com/dib0peewu/image/upload/v1775474405/blog2_mqffat.png",
+    link: "https://medium.com/@gamandeepsingh4/from-stripe-to-solana-why-i-built-a-web3-payment-widget-that-actually-works-8b72b678afa8",
+    date: "September 2025",
+    tag: "Web3",
+    readTime: "6 min read"
+  },
+  {
+    title: "Change your React/Next web app into Mobile App in 5 minutes with Capacitor",
+    shortDescription: "A step-by-step guide to converting a React or Next.js web application into a mobile app using Capacitor, covering setup, configuration, and deployment.",
+    image: "https://res.cloudinary.com/dib0peewu/image/upload/v1775474473/blog3_yu6qjs.png",
+    link: "https://gist.github.com/gamandeepsingh/6efbc17a56ecc5b18fe71bafc7f17ae6",
+    date: "August 2025",
+    tag: "Frontend",
+    readTime: "4 min read"
+  },
+  {
+    title: "How to deploy a Full stack Web Application on Virtual Machines with Nginx and PM2",
+    shortDescription: "A comprehensive guide to deploying a full-stack web application on virtual machines using Nginx and PM2, covering configuration, optimization, and deployment strategies.",
+    image: "https://res.cloudinary.com/dib0peewu/image/upload/v1775474503/blog4_wt7mdx.png",
+    link: "https://gist.github.com/gamandeepsingh/bf658441b6e4ba139f56bf946b46f7db",
+    date: "July 2025",
+    tag: "DevOps",
+    readTime: "10 min read"
+  }
+];
