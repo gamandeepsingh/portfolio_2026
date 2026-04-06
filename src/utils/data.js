@@ -10,7 +10,7 @@ export const personalInfo = {
   portfolio: "https://gamandeepsingh.vercel.app/",
   linkedin: "https://www.linkedin.com/in/gamandeep-singh-344001256/",
   github: "https://github.com/gamandeepsingh",
-  twitter: "https://x.com/gamandeepsingh4",
+  twitter: "https://x.com/techie__ghost",
   bio: "A passionate Full Stack Developer with expertise in Web3, building scalable applications with modern technologies. Currently solving complex problems at GPU.Net while leading 250+ members at INNOGEEKS.",
   shortBio: "I craft digital experiences that combine creativity with cutting-edge technology. Specializing in React, Next.js, and Web3 development.",
 };
