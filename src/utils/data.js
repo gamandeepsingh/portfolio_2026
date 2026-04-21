@@ -122,7 +122,7 @@ export const projectData = [
     description: "AI-powered crypto wallet that enables users to execute blockchain actions using natural language commands, replacing complex UI interactions with a simple chat interface. Built as a Chrome extension with Solana integration.",
     technologies: ["React", "TypeScript", "Solana Web3.js", "OpenAI", "Chrome Extension"],
     image: "https://res.cloudinary.com/dib0peewu/image/upload/v1774967021/1_mwuzob.png",
-    link: "https://solai.gamandeep.xyz/",
+    link: "https://solai.website/",
     github: "https://github.com/gamandeepsingh/solai",
     category: ["web3", "tool"],
     status: "Live",
