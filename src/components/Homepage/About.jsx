@@ -19,9 +19,11 @@ const About = () => {
   ];
 
   const highlights = [
+    "4yr+ experience",
     "Currently building Web3 GPU.Net",
-    "Tech lead at INNOGEEKS technical community",
-    "Shipped 5+ Freelance Projects",
+    "Core Tech lead at INNOGEEKS technical community",
+    "Completed 5+ Freelance Projects",
+    "Shipped 30+ end-to-end Projects",
     "Winner of HackSphere Hackathon & SIH Finalist",
   ];
 
@@ -155,16 +157,16 @@ const About = () => {
           >
             <p className="font-nohemi-thin text-gray-400 text-lg leading-relaxed">
               I&apos;m a <span className="text-white">Full Stack Web3 Developer</span> based in Bengaluru, 
-              currently in final year of my Computer Science degree with a
+              done with my Computer Science degree with a
               <span className="text-white"> CGPA of 9/10</span>.
             </p>
             <p className="font-nohemi-thin text-gray-400 text-lg leading-relaxed">
-              My expertise spans across <span className="text-white">React, Next.js, Node.js, Solana and Web3 technologies</span>. 
+              My expertise spans across <span className="text-white">Rust, React, Next.js, Node.js, Solana and Web3 technologies</span>. 
               I&apos;m passionate about building scalable applications and contributing to open-source projects.
             </p>
             <p className="font-nohemi-thin text-gray-400 text-lg leading-relaxed">
               When I&apos;m not coding, I&apos;m either mentoring fellow developers 
-              or exploring the latest in blockchain technology.
+              or exploring the latest technologies.
             </p>
           </motion.div>
 
