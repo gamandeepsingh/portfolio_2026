@@ -13,6 +13,7 @@ import { useDispatch } from 'react-redux';
 import { fetchProjects } from './store/slices/projectSlice';
 import { Analytics } from "@vercel/analytics/react"
 import GhostCursor from './components/Shared/GhostCursor'
+import GithubActivityModal from './components/Shared/GithubActivityModal'
 
 function App() {
   const dispatch = useDispatch();
@@ -62,6 +63,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>
+      <GithubActivityModal />
       <Analytics />
     </>
   );

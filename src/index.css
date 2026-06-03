@@ -73,6 +73,14 @@
   animation: ghost-rips 1.2s linear infinite;
 }
 
+/* hide scrollbar */
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 @keyframes ghost-rips {
   0%   { left: 0;    top: 11px; }
   50%  { left: 28px; top: 18px; }
