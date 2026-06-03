@@ -170,7 +170,7 @@ const Homepage = () => {
     <div className="relative">
 <Hero />
       <About />
-      <SolarBall />
+      {/* <SolarBall /> */}
       <Services />
       {/* <TunnelAnimation/> */}
       {/* Projects Grid Section */}

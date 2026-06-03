@@ -23,7 +23,7 @@ const About = () => {
     "Currently building Web3 GPU.Net",
     "Core Tech lead at INNOGEEKS technical community",
     "Completed 5+ Freelance Projects",
-    "Shipped 30+ end-to-end Projects",
+    "Bounty won: $200 for SOLAI",
     "Winner of HackSphere Hackathon & SIH Finalist",
   ];
 

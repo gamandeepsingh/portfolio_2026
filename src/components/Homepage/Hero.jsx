@@ -109,7 +109,7 @@ const Hero = () => {
           className="font-nohemi-thin text-base sm:text-lg text-gray-400 max-w-2xl mb-10 leading-relaxed"
         >
           Building scalable applications with modern technologies. Currently crafting 
-          <span className="text-white"> Web3 solutions</span> at 
+          <span className="text-white"> solutions</span> at 
           <a
             href="https://gpu.net/about"
             target="_blank"
@@ -140,7 +140,7 @@ const Hero = () => {
             whileHover={{ scale: 1.02, y: -2 }}
             whileTap={{ scale: 0.98 }}
           >
-            Get in Touch
+            Hire me :)
           </motion.a>
         </motion.div>
 
