@@ -204,7 +204,7 @@ const Contact = () => {
               </Link>
               
               <motion.a
-                href="https://drive.google.com/file/d/1-DTEWoK5NteYP8xzJIp9DZebnu3ei70l/view?usp=sharing"
+                href="https://drive.google.com/file/d/1zCZC-D79eKIy4BOGdzVE-kdfOT1SIb2s/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-white/10 hover:bg-white/[0.04] transition-all text-center group"
